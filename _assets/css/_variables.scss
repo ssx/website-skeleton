@@ -1,0 +1,36 @@
+/**
+ * Colours
+ */
+$accent: #4342a0;
+$accent-dark: #0e1653;
+$highlight-color: #acaae2;
+$secondary: #fc321c;
+$background: #f9f9fd;
+$white: #fff;
+$text: #555374;
+$extra-strong-weight: 900;
+$strong-weight: 900;
+$strong-color: $accent-dark;
+$border: darken($background, 2%);
+
+/**
+ * Sizing
+ */
+$line-height: 1.5;
+$font-size: 20px;
+$tiny-text: 0.75rem;
+$border-radius: 3px;
+$container-width: 760px;
+$top-border-height: 8px;
+$breakpoint: 700px;
+
+/**
+ * Spacing
+ */
+$reg-space: 2rem;
+$lrg-space: 4rem;
+$sml-space: 1rem;
+$tiny-space: 0.5rem;
+
+$monospace-font: Operator Mono, Dank Mono, Fira Code, Consolas, Monaco, Andale Mono, monospace;
+$body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif

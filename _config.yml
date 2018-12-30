@@ -1,0 +1,30 @@
+title: "Your Name"
+sub_title: Short description &middot; City, Country
+site_description: I'm a software developer located in Sydney, Australia specialising in Laravel, Android, and iOS applications.
+description: Freelance software developer, musician, and native plant enthusiast.
+baseurl: ""
+url: https://example.com
+permalink: /:title/
+twitter_url: https://twitter.com/username
+github_url: https://github.com/username
+linkedin_url: https://au.linkedin.com/in/username
+asset_directory: /assets/
+image_directory: /assets/images/
+asset_version: 1
+destination: public
+markdown: kramdown
+highlighter: pygments
+timezone: Australia/Sydney
+author: "Your Name"
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - webpack.mix.js
+  - package.json
+  - package-lock.json
+  - node_modules
+  - LocalValetDriver.php
+  - mix-manifest.json
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-au">
+    <head>
+        <meta charset="utf-8">
+        {% if page.title %}
+            <title>{{ page.title }}{% unless page.do_not_prepend_title %} &middot; {{ site.title }}{% endunless %}</title>
+            <meta name="description" content="{{ page.excerpt }}">
+            <meta property="og:title" content="{{ page.title }}">
+            <meta property="og:description" content="{{ page.excerpt }}">
+        {% else %}
+            <title>{{ site.title }} &middot; {{ site.sub_title }}</title>
+            <meta name="description" content="{{ site.site_description }}">
+            <meta property="og:title" content="{{ site.title }}">
+            <meta property="og:description" content="{{ site.site_description }}">
+        {% endif %}
+        {% if page.index == false %}
+            <meta name="robots" content="noindex, nofollow">
+        {% endif %}
+        <meta property="og:site_name" content="{{ site.title }}">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        {% if page.image %}
+            <meta property="og:image" content="{{ site.url }}{{ page.image }}?v={{ site.asset_version }}">
+            <meta name="twitter:image:alt" content="{{ page.title }}">
+        {% else %}
+            <meta property="og:image" content="{{ site.url }}{{ site.image_directory }}main-site-image.png?v={{ site.asset_version }}">
+            <meta name="twitter:image:alt" content="{{ site.title }}">
+        {% endif %}
+        {% feed_meta %}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="google-site-verification" content="XXXXX">
+        <meta name="msvalidate.01" content="XXXXX">
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}{{ site.image_directory }}favicon/apple-touch-icon.png?v={{ site.asset_version }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}{{ site.image_directory }}favicon/favicon-32x32.png?v={{ site.asset_version }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}{{ site.image_directory }}favicon/favicon-16x16.png?v={{ site.asset_version }}">
+        <link rel="manifest" href="{{ site.url }}{{ site.image_directory }}favicon/manifest.json?v={{ site.asset_version }}">
+        <link rel="mask-icon" color="#4342a0" href="{{ site.url }}{{ site.image_directory }}favicon/safari-pinned-tab.svg?v={{ site.asset_version }}">
+        <link rel="shortcut icon" href="{{ site.url }}{{ site.image_directory }}favicon/favicon.ico?v={{ site.asset_version }}">
+        <meta name="msapplication-TileColor" content="#4342a0">
+        <meta name="msapplication-config" content="{{ site.url }}{{ site.image_directory }}favicon/browserconfig.xml?v={{ site.asset_version }}">
+        <meta name="theme-color" content="#4342a0">
+        <link rel="stylesheet" href="{{ site.asset_directory }}app.css?v={{ site.asset_version }}">
+        <script src="{{ site.asset_directory }}app.js?v={{ site.asset_version }}"></script>
+    </head>
+    <body>
+        {{ content }}
+        <footer>
+            <nav class="container">
+                <ul>
+                    <li>
+                        <a href="/">Posts</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.twitter_url }}">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.github_url }}">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.linkedin_url }}">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="acknowledgment">I would like to acknowledge the Cadigal people who are the Traditional Custodians of the Land on which I work.</div>
+        </footer>
+        <button id="open-menu-button" class="menu-button" aria-label="Open menu">
+            <svg role="img" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="m 1,9.6262715 12,0 0,2.6837195 -12,0 z m 0,-3.909844 12,0 0,2.68288 -12,0 z m 0,-4.026418 12,0 0,2.684558 -12,0 z"/></svg>
+        </button>
+        <div id="main-menu" aria-hidden="true">
+            <button id="close-menu-button" class="menu-button" aria-label="Close menu">
+                <svg role="img" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="m 13,10.65657 q 0,0.40404 -0.28283,0.68686 l -1.37374,1.37374 Q 11.06061,13 10.65657,13 10.25253,13 9.9697,12.71717 L 7,9.74747 4.0303,12.71717 Q 3.74747,13 3.34343,13 2.93939,13 2.65657,12.71717 L 1.28283,11.34343 Q 1,11.06061 1,10.65657 1,10.25253 1.28283,9.9697 L 4.25253,7 1.28283,4.0303 Q 1,3.74747 1,3.34343 1,2.93939 1.28283,2.65657 L 2.65657,1.28283 Q 2.93939,1 3.34343,1 3.74747,1 4.0303,1.28283 L 7,4.25253 9.9697,1.28283 Q 10.25253,1 10.65657,1 q 0.40404,0 0.68686,0.28283 l 1.37374,1.37374 Q 13,2.93939 13,3.34343 13,3.74747 12.71717,4.0303 L 9.74747,7 12.71717,9.9697 Q 13,10.25253 13,10.65657 z"/></svg>
+            </button>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Posts</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.twitter_url }}">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.github_url }}">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="{{ site.linkedin_url }}">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

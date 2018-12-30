@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign post = page %}
+<article class="section" itemscope itemtype="http://schema.org/TechArticle">
+    <div class="container">
+        {% include page_title.html %}
+        <meta itemprop="image" content="{{ site.url }}{{ post.image }}?v={{ site.asset_version }}">
+        <div itemprop="articleBody" itemprop="mainContentOfPage">
+            {{ content }}
+        </div>
+    </div>
+</article>
+{% if page.previous or page.next %}
+<nav id="other-posts">
+    <ul>
+        {% if page.previous %}
+            <li class="previous">
+                <a href="{{ page.previous.url }}" title="{{ page.previous.title }}">
+                    {{ page.previous.title }}<br>
+                    <span class="direction">&#x2190; Previous</span>
+                </a>
+            </li>
+        {% endif %}
+        {% if page.next %}
+            <li class="next">
+                <a href="{{ page.next.url }}" title="{{ page.next.title }}">
+                    {{ page.next.title }}<br>
+                    <span class="direction">Next &#x2192;</span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}

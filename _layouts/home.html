@@ -1,0 +1,50 @@
+---
+layout: default
+---
+<div class="section">
+    <div class="container">
+        <header class="profile is-main" itemscope itemtype="http://schema.org/Person">
+            <a class="profile-image-link" href="/">
+                <img src="{{ site.image_directory }}profile.png?v={{ site.asset_version }}" class="img" alt="XXXX" height="125" width="125" itemprop="image">
+            </a>
+            <h1 itemprop="name">
+                <a href="/">{{ site.title }}</a>
+            </h1>
+            <p class="tagline" itemprop="description">
+                {{ site.description }}
+            </p>
+            <ul class="meta">
+                <li>
+                    <span itemprop="telephone" class="phone">
+                        0412 345 678
+                    </span>
+                </li>
+                <li>
+                    <span itemprop="address" class="location">
+                        City, Country
+                    </span>
+                </li>
+            </ul>
+            <a href="/about/" class="button">
+                About Me
+            </a>
+        </header>
+        {% for post in site.posts %}
+            <article class="index-article" itemscope itemtype="http://schema.org/TechArticle">
+                <meta itemprop="image" content="{{ site.url }}{{ post.image }}?v={{ site.asset_version }}">
+                <meta itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%dT%H:%M:%SL' }}">
+                <h2 itemprop="headline">
+                    <a href="{{ post.url }}" itemprop="url">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p itemprop="description">
+                    {% if post.guest_post %}
+                        <span class="tag">Guest post</span>
+                    {% endif %}
+                    {{ post.excerpt }}
+                </p>
+            </article>
+        {% endfor %}
+    </div>
+</div>

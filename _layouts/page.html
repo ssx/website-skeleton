@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<main class="section" itemscope itemtype="http://schema.org/WebPage">
+    <div class="container">
+        {% include page_title.html %}
+        <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/WebPageElement">
+            <div itemprop="text">{{ content }}</div>
+        </div>
+    </div>
+</main>

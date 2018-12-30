@@ -1,0 +1,37 @@
+.highlight .nx, /* ClassName:: */
+.highlight .nc { /* class ClassName */
+    color: #db515c;
+}
+.highlight .nv { /* $variable */
+    color: #2f6eb4;
+}
+
+.highlight .o, /* ::, -> */
+.highlight .p,
+.highlight .si { /* () */
+    color: rgba($accent, 0.65);
+}
+
+.highlight .s1, /* 'String' */
+.highlight .s2 { /* "String" */
+    color: #50b037;
+}
+
+.highlight .na, /* ->method(), ->property */
+.highlight .nf { /* function functionName */
+    color: #db515c;
+}
+
+.highlight .k, /* Keyword */
+.highlight .nb {  /* base function */
+    color: #e5823f;
+}
+
+.highlight .c1 { /* Comment.Single */
+    font-style: italic;
+    color: rgba($text, 0.5);
+}
+
+.highlight .mi { /** number: 200 */
+    color: #a568df;
+}

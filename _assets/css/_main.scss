@@ -1,0 +1,522 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+::-moz-selection {
+    color: $white;
+    text-shadow: none;
+    background-color: $highlight-color;
+}
+
+::selection {
+    color: $white;
+    text-shadow: none;
+    background-color: $highlight-color;
+}
+
+html {
+    color: $text;
+    font-size: $font-size;
+    box-sizing: border-box;
+    font-family: $body-font;
+    line-height: $line-height;
+    background-color: $background;
+}
+
+body {
+    border-top: $top-border-height solid $accent;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    color: $white;
+    text-align: center;
+    background-color: $accent;
+    padding: $reg-space $tiny-space;
+}
+
+time {
+    display: block;
+    color: $strong-color;
+    font-size: $tiny-text;
+    margin: $sml-space 0;
+    font-weight: $strong-weight;
+}
+
+a {
+    color: $accent;
+    text-decoration: none;
+    transition: color 200ms ease-out;
+}
+
+footer a {
+    color: $white;
+}
+
+a:hover {
+    color: $strong-color;
+}
+
+ul {
+    margin: $reg-space 0;
+    padding-left: $sml-space;
+}
+
+li,
+li ul {
+    margin: $tiny-space 0;
+}
+
+b,
+strong {
+    font-weight: $strong-weight;
+    color: $strong-color;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+article img {
+    border: 1px solid $border;
+    border-radius: $border-radius;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    margin: $reg-space 0;
+    color: $strong-color;
+    font-weight: $extra-strong-weight;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0 0 $reg-space;
+}
+
+@media only screen and (min-width: 340px) {
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 370px) {
+    h1 {
+        font-size: 1.75em;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    h1 {
+        font-size: 2.25em;
+    }
+}
+
+@media only screen and (min-width: 460px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+p {
+    margin: $reg-space 0;
+}
+
+nav {
+    font-weight: 700;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+}
+
+footer nav {
+    margin-bottom: $sml-space;
+}
+
+footer nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (min-width: $breakpoint) {
+    footer nav ul {
+        justify-content: space-around;
+    }
+}
+
+footer nav a {
+    display: inline-block;
+    padding: $tiny-space $sml-space;
+}
+
+footer nav ul:hover a {
+    color: $accent-dark;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+footer nav ul:hover a:hover {
+    color: $white;
+    text-shadow: none;
+}
+
+figure {
+    margin: 0;
+}
+
+code {
+    font-family: $monospace-font;
+}
+
+pre,
+*:not(pre) > code {
+    font-size: $tiny-text;
+    border: 1px solid $border;
+    font-family: $monospace-font;
+    border-radius: $border-radius;
+    background-color: lighten($background, 0.75%);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+pre {
+    line-height: 2.25;
+    overflow-x: scroll;
+    margin: $reg-space 0;
+    padding: $tiny-space $sml-space;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 0 5px $white, inset 0 0 4px $border;
+}
+
+*:not(pre) > code {
+    padding: 0 0.3rem;
+    display: inline-block;
+}
+
+.turbolinks-progress-bar {
+    height: $top-border-height;
+    background-color: $secondary;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $container-width;
+}
+
+.section {
+    padding: $lrg-space $sml-space;
+}
+
+[itemprop="mainContentOfPage"] > [itemprop="text"] > :last-child,
+[itemprop="articleBody"] > :last-child {
+    margin-bottom: 0;
+}
+
+[itemprop="mainContentOfPage"] > [itemprop="text"] a,
+[itemprop="articleBody"] a {
+    font-weight: 700;
+}
+
+.button {
+    padding: 0 0.5rem;
+    white-space: nowrap;
+    align-items: center;
+    display: inline-flex;
+    font-size: $tiny-text;
+    justify-content: center;
+    color: rgba($white, 0.95);
+    background-color: $accent;
+    border-radius: $border-radius;
+    transition: background-color 200ms ease-out;
+    height: calc(#{$line-height} * #{$font-size});
+}
+
+.button:hover,
+.button:active {
+    color: rgba($white, 0.95);
+    background-color: $accent-dark;
+}
+
+.divider {
+    color: $accent;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+[aria-hidden="true"]:not(#main-menu,svg) {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    clip: rect(0, 0, 0, 0);
+}
+
+.acknowledgment {
+    font-size: $tiny-text;
+}
+
+.profile > * {
+    margin-top: 0;
+    margin-bottom: $sml-space;
+}
+
+.profile > *:last-child {
+    margin-bottom: 0;
+}
+
+.profile .meta {
+    padding: 0;
+    list-style: none;
+    font-size: $tiny-text;
+}
+
+.profile .meta span {
+    padding-left: 1.5em;
+    display: inline-block;
+    background-size: 0.75em;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.profile .location {
+    background-image: url('/assets/images/pin.png');
+}
+
+.profile .phone {
+    background-image: url('/assets/images/phone.png');
+    background-size: 1em;
+}
+
+.profile h1 a {
+    color: inherit;
+}
+
+.profile img {
+    opacity: 1;
+    border-radius: 50%;
+    transition: 500ms ease-out;
+}
+
+.profile-image-link {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 500ms ease-out;
+    box-shadow: 0 0 0 3px $background, 0 0 0 6px $accent;
+}
+
+.profile-image-link:hover {
+    box-shadow: 0 0 0 3px $background, 0 0 0 6px $secondary;
+}
+
+.index-article:not(:first-child) {
+    margin-top: $lrg-space;
+}
+
+.index-article h2 {
+    margin-bottom: $sml-space;
+}
+
+.index-article p {
+    margin-top: $sml-space;
+}
+
+#other-posts {
+    line-height: 1.2;
+    padding: $reg-space;
+    background-size: 400px;
+    background-attachment: fixed;
+    background-color: $border;
+    background-image: url('/assets/images/pattern.png');
+}
+
+#other-posts li + li {
+    margin-top: $reg-space;
+}
+
+@media only screen and (min-width: 600px) {
+    #other-posts ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #other-posts li + li {
+        margin-top: 0;
+    }
+
+    #other-posts li {
+        flex-grow: 1;
+    }
+
+    #other-posts .next {
+        text-align: right;
+    }
+}
+
+.direction {
+    font-size: $tiny-text;
+    color: rgba($text, 0.5);
+    font-weight: $strong-weight;
+    transition: color 200ms ease-out;
+}
+
+a:hover .direction {
+    color: rgba($text, 0.75);
+}
+
+.is-code {
+    font-family: $monospace-font;
+}
+
+#main-menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    pointer-events: none;
+    transform: scale(1.33);
+    justify-content: center;
+    transition: all 200ms ease-out;
+    background-color: rgba($border, 0.98);
+}
+
+#main-menu[aria-hidden="false"] {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+#main-menu li:not(:first-child) {
+    margin-top: $tiny-space;
+}
+
+@media only screen and (min-width: 340px) and (min-height: 340px) {
+    #main-menu {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (min-width: 370px) and (min-height: 370px) {
+    #main-menu {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 400px) and (min-height: 400px) {
+    #main-menu {
+        font-size: 1.75em;
+    }
+
+    #main-menu li:not(:first-child) {
+        margin-top: $sml-space;
+    }
+}
+
+.menu-button {
+    border: 0;
+    display: flex;
+    cursor: pointer;
+    position: fixed;
+    appearance: none;
+    box-shadow: none;
+    right: $sml-space;
+    padding: $tiny-space;
+    border-radius: 50%;
+    background-color: rgba($border, 0.7);
+    top: calc(#{$sml-space} + #{$top-border-height});
+}
+
+#close-menu-button {
+    background-color: rgba($background, 0.6);
+}
+
+/*!
+ * LibreICONS v4.0.2 by @devel - https://github.com/DiemenDesign/LibreICONS
+ * License - http://www.gnu.org/licenses/gpl-3.0.txt
+ * Version 4.0.2
+*/
+.menu-button svg {
+    fill: $accent;
+    width: 1.25rem;
+    height: 1.25rem;
+    text-rendering: auto;
+    display: inline-block;
+    transition: fill 200ms ease-out;
+}
+
+.menu-button:hover svg {
+    fill: $strong-color;
+}
+
+.has-text-centered {
+    text-align: center;
+}
+
+blockquote > :first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: italic;
+    color: $accent-dark;
+    margin: $sml-space 0;
+    padding: $sml-space 0 $sml-space $reg-space;
+    border-left: $top-border-height solid $border;
+    font-family: Georgia,$body-font;
+}
+
+.tag {
+    padding: 0 0.5rem;
+    white-space: nowrap;
+    align-items: center;
+    display: inline-flex;
+    font-size: $tiny-text;
+    justify-content: center;
+    color: rgba($white, 0.95);
+    background-color: #53ac77;
+    border-radius: $border-radius;
+    height: calc(#{$line-height} * #{$font-size});
+}
+
+.mt-0\.5 {
+    margin-top: 0.5rem;
+}
